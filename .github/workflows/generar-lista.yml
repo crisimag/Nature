@@ -30,8 +30,9 @@ jobs:
           extensiones = {
               '.jpg', '.jpeg', '.png', '.gif', '.webp',
               '.tiff', '.tif', '.dng',
+              '.heic', '.heif', '.heics', '.heifs',
               '.mp4', '.mov', '.webm', '.mkv', '.avi',
-              '.heic', '.heif', '.avif'
+              '.avif'
           }
 
           archivos = []
@@ -74,5 +75,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add Carpeta/lista.json
-          git diff --staged --quiet || git commit -m " Auto-generar lista.json con fecha y hora"
+          git diff --staged --quiet || git commit -m "🤖 Auto-generar lista.json con fecha y hora"
           git push
